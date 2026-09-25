@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A review of HTML meta tags and CSS styling for the WDD 131 ponder assignment." />
+    <meta name="author" content="Jane Doe" />
+    <title>Meta Tags and CSS Review</title>
+    <style>
+      :root {
+        --page-bg: #dfe5e8;
+        --panel-bg: #f4f4f4;
+        --panel-border: #c8c8c8;
+        --heading: #1a4868;
+        --accent: #2e5d7b;
+        --text: #2b2b2b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--page-bg);
+        color: var(--text);
+      }
+
+      #content {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem 2.5rem 2.75rem;
+        background: var(--panel-bg);
+        border: 1px solid var(--panel-border);
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        margin-top: 0;
+        text-align: center;
+        color: var(--heading);
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid #b9c6cc;
+        margin: 1.5rem 0;
+      }
+
+      img {
+        display: block;
+        margin: 1.5rem auto;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #b6c8d0;
+        border-radius: 8px;
+      }
+
+      #topics {
+        margin-top: 2rem;
+      }
+
+      h2 {
+        color: var(--accent);
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .list {
+        margin: 0;
+        padding-left: 1.5rem;
+        font-size: 1.06rem;
+        line-height: 1.7;
+      }
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="content">
+      <h1>HTML, CSS, and JS</h1>
+      <p>The foundational technologies that power websites and web applications</p>
+      <hr />
+      <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos" />
+
+      <div id="topics">
+        <h2>HyperText Markup Language</h2>
+        <ul class="list">
+          <li>Defines the structure and content of a web page.</li>
+          <li>Without HTML there&apos;s nothing for the browser to display.</li>
+        </ul>
+
+        <h2>Cascading Style Sheets</h2>
+        <ul class="list">
+          <li>Controls how the HTML elements look.</li>
+          <li>Without CSS pages look plain and unstyled.</li>
+        </ul>
+
+        <h2>JavaScript</h2>
+        <ul class="list">
+          <li>Adds interactivity and dynamic behavior.</li>
+          <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
