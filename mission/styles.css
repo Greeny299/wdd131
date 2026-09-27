@@ -8,6 +8,19 @@
   --text: #1e232b;
   --line: #0d5e99;
   --accent: #0d5e99;
+  --framework: rgba(0, 0, 0, 0.08);
+  --logo-filter: brightness(0) saturate(100%) invert(17%) sepia(80%) saturate(467%)
+    hue-rotate(178deg) brightness(0.9) contrast(1.2);
+}
+
+body[data-theme='dark'] {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5eefb;
+  --line: #dbeafe;
+  --accent: #f8fafc;
+  --framework: rgba(148, 163, 184, 0.18);
+  --logo-filter: none;
 }
 
 body {
@@ -16,6 +29,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg);
   color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .page-shell {
@@ -24,19 +38,54 @@ body {
   padding: 0 18px;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+select {
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .mission-card {
   background: var(--card);
   padding: 28px 36px 38px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--framework);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .brand {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
   color: var(--accent);
   font-weight: 800;
   letter-spacing: -0.08em;
   line-height: 0.82;
   margin: 0 0 14px;
+}
+
+#logo {
+  width: clamp(120px, 12vw, 180px);
+  height: auto;
+  filter: var(--logo-filter);
+  transition: filter 0.25s ease;
+}
+
+.brand-text {
+  display: block;
 }
 
 .word {

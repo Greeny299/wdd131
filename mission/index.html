@@ -10,13 +10,30 @@
     <meta name="author" content="Royal" />
     <title>BYU-Idaho Mission Statement</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="mission.js" defer></script>
   </head>
-  <body>
+  <body data-theme="light">
     <div class="page-shell">
+      <div class="toolbar" aria-label="Theme selector">
+        <label for="theme-select">Choose mode</label>
+        <select id="theme-select">
+          <option value="">Choose Mode</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+
       <main class="mission-card">
         <div class="brand" aria-label="Brigham Young University Idaho wordmark">
-          <span class="word byu">BYU</span>
-          <span class="word idaho">IDAHO</span>
+          <img
+            id="logo"
+            src="https://wddbyui.github.io/wdd131/images/byui-logo-white.png"
+            alt="BYU-Idaho logo"
+          />
+          <div class="brand-text">
+            <span class="word byu">BYU</span>
+            <span class="word idaho">IDAHO</span>
+          </div>
         </div>
 
         <div class="rule" aria-hidden="true"></div>
