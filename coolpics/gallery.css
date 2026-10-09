@@ -36,6 +36,11 @@ nav {
   display: none;
 }
 
+.menu-open nav {
+  display: flex;
+  flex-direction: column;
+}
+
 nav a {
   padding: 0.5rem 1rem;
   color: white;
@@ -71,6 +76,47 @@ h2 {
   object-fit: cover;
   border: 3px solid white;
   box-shadow: 0 2px 5px #555;
+  cursor: pointer;
+}
+
+.gallery img:focus-visible,
+.menu-button:focus-visible,
+.modal-close:focus-visible {
+  outline: 3px solid #f5cf5b;
+  outline-offset: 3px;
+}
+
+.photo-modal {
+  position: relative;
+  width: min(90vw, 1000px);
+  max-width: none;
+  max-height: 90vh;
+  padding: 2.75rem 1rem 1rem;
+  border: 0;
+  background: white;
+}
+
+.photo-modal::backdrop {
+  background: rgb(0 0 0 / 80%);
+}
+
+.modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 4rem);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 footer {
@@ -102,6 +148,7 @@ footer {
   nav {
     display: flex;
     justify-content: center;
+    flex-direction: row;
   }
 
   nav a {
