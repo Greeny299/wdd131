@@ -8,14 +8,7 @@ let menuButton = document.querySelector(".menu-btn");
 menuButton.addEventListener("click", (e) => {
     // 3. toggle whether the links are displayed or not
     let nav = document.querySelector("nav");
-    if (nav.style.display === '') {
-        nav.style.display = 'flex';
-    } else {
-        nav.style.display = '';
-    }
-
-    //ternary operator
-    nav.style.display = nav.style.display === '' ? 'flex' : '';
+    nav.classList.toggle('hide');
 
     // 4. toggle X animation for menu button
     menuButton.classList.toggle('change');

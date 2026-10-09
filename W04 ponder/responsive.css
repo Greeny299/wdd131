@@ -29,6 +29,10 @@ nav a {
     color: black;
 }
 nav {
+    display: flex;
+    flex-direction: column;
+}
+.hide {
     display: none;
 }
 nav a:hover {
@@ -77,7 +81,12 @@ footer {
         display: inline;
     }
     nav {
+        display: flex;
+        flex-direction: row;
         text-align: right;
+    }
+    nav.hide {
+        display: flex;
     }
 }
 
