@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Ticket Form</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="eventform.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Event Ticket Registration</h1>
+
+      <form id="ticketForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="eventDate">Event Date</label>
+          <input id="eventDate" name="eventDate" type="date" required />
+        </div>
+
+        <div class="field">
+          <label for="ticketType">Type</label>
+          <select id="ticketType" name="ticketType" required>
+            <option value="">Select a type</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+
+        <div id="identityField" class="field hidden" aria-live="polite">
+          <label for="identifierInput" id="identifierLabel">Student ID</label>
+          <input
+            id="identifierInput"
+            name="identifierInput"
+            type="text"
+            placeholder="123456789"
+          />
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div id="formErrors" class="errors" aria-live="polite"></div>
+
+      <section id="ticketInfo" class="ticket-info hidden" aria-live="polite">
+        <h2>Ticket Information</h2>
+        <p>Thank you, <span id="ticketName"></span>!</p>
+        <ul>
+          <li><strong>Type:</strong> <span id="ticketLabel"></span></li>
+          <li><strong>Date:</strong> <span id="ticketDate"></span></li>
+          <li><strong>Confirmation:</strong> <span id="ticketNumber"></span></li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="eventform.js"></script>
+  </body>
+</html>

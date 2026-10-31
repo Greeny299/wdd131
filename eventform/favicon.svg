@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Event ticket favicon">
+  <rect width="64" height="64" rx="12" fill="#224c89"/>
+  <rect x="10" y="18" width="44" height="28" rx="6" fill="#ffffff"/>
+  <path d="M21 30h22M21 36h14" stroke="#224c89" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="36" r="4" fill="#d6ebff"/>
+  <path d="M16 14h32v6H16zm0 36h32v6H16z" fill="#d6ebff" opacity="0.9"/>
+</svg>
