@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet Snortleblat, a swamp beast diplomat. Check character stats, take damage, and level up."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Snortleblat | Character Card" />
+    <meta
+      property="og:description"
+      content="Meet Snortleblat, a swamp beast diplomat. Check character stats, take damage, and level up."
+    />
+    <meta property="og:url" content="https://greeny299.github.io/wdd131/charactercard/" />
+    <meta
+      property="og:image"
+      content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Snortleblat | Character Card" />
+    <meta
+      name="twitter:description"
+      content="Meet Snortleblat, a swamp beast diplomat. Check character stats, take damage, and level up."
+    />
+    <meta
+      name="twitter:image"
+      content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="character.css" />
+    <title>Snortleblat | Character Card</title>
+    <script src="character.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-heading">
+        <p class="eyebrow">Field guide · Creature registry</p>
+        <h1>Character card</h1>
+      </header>
+
+      <article class="card" aria-labelledby="character-name">
+        <div class="portrait-wrap">
+          <img
+            class="portrait"
+            src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp"
+            alt="Snortleblat, a swamp beast diplomat, standing in a misty marsh"
+            width="1200"
+            height="630"
+          />
+          <span class="portrait-label">Marshlands · No. 0131</span>
+        </div>
+
+        <div class="card-content">
+          <div class="identity">
+            <p class="eyebrow">Swamp beast diplomat</p>
+            <h2 id="character-name">Snortleblat</h2>
+          </div>
+
+          <dl class="stats">
+            <div class="stat">
+              <dt>Class</dt>
+              <dd id="character-class">Swamp Beast Diplomat</dd>
+            </div>
+            <div class="stat">
+              <dt>Level</dt>
+              <dd id="character-level">1</dd>
+            </div>
+            <div class="stat health-stat">
+              <dt>Health</dt>
+              <dd><span id="character-health">100</span><span class="health-total"> / 100</span></dd>
+              <div
+                class="health-track"
+                role="meter"
+                aria-label="Character health"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+              >
+                <span id="health-fill" class="health-fill"></span>
+              </div>
+            </div>
+          </dl>
+
+          <div class="actions" aria-label="Character actions">
+            <button id="attack-button" class="button button-secondary" type="button">
+              Take 20 damage
+            </button>
+            <button id="level-button" class="button button-primary" type="button">
+              Level up
+            </button>
+          </div>
+          <p id="status-message" class="status-message" aria-live="polite">
+            Ready for the next adventure.
+          </p>
+        </div>
+      </article>
+      <footer>WDD 131 <span aria-hidden="true">·</span> Character registry</footer>
+    </main>
+  </body>
+</html>
