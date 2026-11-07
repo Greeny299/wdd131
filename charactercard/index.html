@@ -44,7 +44,7 @@
       <article class="card" aria-labelledby="character-name">
         <div class="portrait-wrap">
           <img
-            class="portrait"
+            class="image portrait"
             src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp"
             alt="Snortleblat, a swamp beast diplomat, standing in a misty marsh"
             width="1200"
@@ -56,21 +56,14 @@
         <div class="card-content">
           <div class="identity">
             <p class="eyebrow">Swamp beast diplomat</p>
-            <h2 id="character-name">Snortleblat</h2>
+            <h2 id="character-name" class="name">Snortleblat</h2>
           </div>
 
-          <dl class="stats">
-            <div class="stat">
-              <dt>Class</dt>
-              <dd id="character-class">Swamp Beast Diplomat</dd>
-            </div>
-            <div class="stat">
-              <dt>Level</dt>
-              <dd id="character-level">1</dd>
-            </div>
-            <div class="stat health-stat">
-              <dt>Health</dt>
-              <dd><span id="character-health">100</span><span class="health-total"> / 100</span></dd>
+          <div class="stats">
+            <p><strong>Class:</strong> <span id="character-class">Swamp Beast Diplomat</span></p>
+            <p><strong>Level:</strong> <span id="character-level">1</span></p>
+            <div class="health-stat">
+              <p><strong>Health:</strong> <span id="character-health">100</span><span class="health-total"> / 100</span></p>
               <div
                 class="health-track"
                 role="meter"
@@ -82,13 +75,13 @@
                 <span id="health-fill" class="health-fill"></span>
               </div>
             </div>
-          </dl>
+          </div>
 
-          <div class="actions" aria-label="Character actions">
-            <button id="attack-button" class="button button-secondary" type="button">
+          <div class="buttons" aria-label="Character actions">
+            <button id="attack-button" type="button">
               Take 20 damage
             </button>
-            <button id="level-button" class="button button-primary" type="button">
+            <button id="level-button" type="button">
               Level up
             </button>
           </div>
