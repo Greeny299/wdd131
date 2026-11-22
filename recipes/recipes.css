@@ -92,6 +92,17 @@ main {
   padding-block: 2rem 2.5rem;
 }
 
+.results-status {
+  margin: 0 0 0.75rem;
+  color: #514e49;
+  font-size: 0.9rem;
+}
+
+.recipe-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
 .recipe {
   display: flex;
   align-items: flex-start;
@@ -120,6 +131,22 @@ main {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.category button {
+  margin: 0 0.35rem 0.25rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d5d0c7;
+  border-radius: 2px;
+  background: #f6f4f0;
+  color: #514e49;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.category button:hover {
+  background: #ebe6dd;
 }
 
 h1 {
@@ -167,6 +194,25 @@ h2 {
   color: #514e49;
   font-size: 0.9rem;
   line-height: 1.7;
+}
+
+.instructions {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  color: #514e49;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.no-results {
+  padding: 2rem 1rem;
+  border: 1px solid #d5d0c7;
+  background: #fff;
+  text-align: center;
+}
+
+.no-results h1 {
+  margin-bottom: 0.5rem;
 }
 
 .site-footer {
@@ -246,8 +292,8 @@ h2 {
     flex-basis: auto;
   }
 
-  .description {
-    display: none;
+  h1 {
+    font-size: 2.75rem;
   }
 
   .site-footer {

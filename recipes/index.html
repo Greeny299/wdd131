@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A simple recipe book featuring a cozy apple crisp recipe." />
+    <meta name="description" content="Browse and search a collection of family recipes." />
     <meta name="author" content="Greeny299" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Recipe Book | Apple Crisp" />
-    <meta property="og:description" content="A cozy apple crisp recipe with a buttery oat topping." />
+    <meta property="og:title" content="Recipe Book" />
+    <meta property="og:description" content="Browse and search a collection of family recipes." />
     <meta property="og:url" content="https://greeny299.github.io/wdd131/recipes/" />
     <meta property="og:image" content="https://greeny299.github.io/wdd131/recipes/images/social-preview-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Recipe Book | Apple Crisp" />
-    <meta name="twitter:description" content="A cozy apple crisp recipe with a buttery oat topping." />
+    <meta name="twitter:title" content="Recipe Book" />
+    <meta name="twitter:description" content="Browse and search a collection of family recipes." />
     <meta name="twitter:image" content="https://greeny299.github.io/wdd131/recipes/images/social-preview-image.jpg" />
     <link rel="icon" href="images/recipe-book.png" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="recipes.css" />
-    <title>Recipe Book | Apple Crisp</title>
+    <title>Recipe Book</title>
   </head>
   <body>
     <header class="site-header">
@@ -29,9 +29,9 @@
         <span>Recipe Book</span>
       </a>
 
-      <form class="search" role="search">
+      <form class="search" id="search-form" role="search">
         <label class="visually-hidden" for="recipe-search">Search recipes</label>
-        <input id="recipe-search" type="search" placeholder="Find a recipe" />
+        <input id="recipe-search" type="search" placeholder="Find a recipe" autocomplete="off" />
         <button type="submit" aria-label="Search recipes">
           <img src="images/search.svg" alt="" />
         </button>
@@ -39,33 +39,8 @@
     </header>
 
     <main>
-      <article class="recipe">
-        <img class="recipe-photo" src="images/apple-crisp.jpg" alt="Warm apple crisp topped with oats and served with a scoop of vanilla ice cream" />
-        <div class="recipe-content">
-          <p class="category">Dessert</p>
-          <h1>Apple Crisp</h1>
-          <p class="description">A comforting, easy-to-make dessert with tender cinnamon apples and a crisp, buttery oat topping. Serve it warm with vanilla ice cream.</p>
-          <div class="recipe-meta">
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-            <span class="prep-time">Prep: 15 min</span>
-          </div>
-          <h2>Ingredients</h2>
-          <ul class="ingredients">
-            <li>6 cups peeled, sliced apples</li>
-            <li>¾ cup brown sugar</li>
-            <li>½ cup rolled oats</li>
-            <li>½ cup all-purpose flour</li>
-            <li>1 teaspoon ground cinnamon</li>
-            <li>⅓ cup cold butter</li>
-          </ul>
-        </div>
-      </article>
+      <p class="results-status" id="results-status" aria-live="polite"></p>
+      <section class="recipe-list" id="recipe-list" aria-label="Recipes"></section>
     </main>
 
     <footer class="site-footer">
@@ -77,5 +52,6 @@
         <a href="https://www.pinterest.com/" aria-label="Pinterest"><img src="images/pinterest_icon.svg" alt="" /></a>
       </div>
     </footer>
+    <script src="recipes.js"></script>
   </body>
 </html>
